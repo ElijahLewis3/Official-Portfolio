@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Elijah Lewis — Software Engineering Student & Open-Source Contributor">
+  <title>Elijah Lewis — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">EL<span class="accent">.</span></a>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#hero" class="nav__link active" data-section="hero">Home</a></li>
+        <li><a href="#about" class="nav__link" data-section="about">About</a></li>
+        <li><a href="#projects" class="nav__link" data-section="projects">Projects</a></li>
+        <li><a href="#experience" class="nav__link" data-section="experience">Experience</a></li>
+        <li><a href="#education" class="nav__link" data-section="education">Education</a></li>
+        <li><a href="#contact" class="nav__link" data-section="contact">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <div class="social-links social-links--header">
+          <a href="https://linkedin.com/in/elijah-lewis03" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://github.com/ElijahLewis3" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <canvas class="hero__particles" id="particlesCanvas"></canvas>
+      <div class="hero__gradient"></div>
+      <div class="hero__content container">
+        <div class="hero__text reveal">
+          <p class="hero__greeting">Hello, I'm</p>
+          <h1 class="hero__name">Elijah Lewis</h1>
+          <h2 class="hero__title">
+            <span class="typing-wrapper">
+              <span id="typingText"></span>
+              <span class="typing-cursor">|</span>
+            </span>
+          </h2>
+          <p class="hero__tagline">Software Engineering student at the University of Guelph with hands-on experience in full-stack development, open-source contribution, and data-driven applications.</p>
+          <div class="hero__cta">
+            <a href="#projects" class="btn btn--primary">View My Work</a>
+            <a href="#contact" class="btn btn--outline">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero__image reveal reveal--right">
+          <div class="hero__image-wrapper">
+            <img src="portrait.jpg" alt="Elijah Lewis portrait" loading="eager" width="450" height="450">
+            <div class="hero__image-border"></div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <div class="scroll-indicator__mouse">
+          <div class="scroll-indicator__wheel"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+      <div class="about__bg" style="background-image: url('workspace.jpg')"></div>
+      <div class="container">
+        <h2 class="section__title reveal">About <span class="accent">Me</span></h2>
+        <p class="section__subtitle reveal">Get to know the person behind the code</p>
+        <div class="about__grid">
+          <div class="about__content reveal">
+            <p>I'm a Software Engineering student at the University of Guelph pursuing a Bachelor of Computing, graduating in April 2026. I'm passionate about building robust, scalable applications and solving complex problems through clean code and thoughtful design.</p>
+            <p>My experience spans full-stack development, data visualization platforms, and open-source contributions — including feature development on Signal, the end-to-end encrypted messaging application. I thrive in Agile environments and enjoy collaborating with teams to ship meaningful software.</p>
+            <p>I bring hands-on expertise across multiple languages, cloud platforms, and development tools, with a strong foundation in data structures, algorithms, system design, and object-oriented programming.</p>
+            <div class="about__stats">
+              <div class="stat">
+                <span class="stat__number" data-target="8">0</span>
+                <span class="stat__label">Languages</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number" data-target="3">0</span><span class="accent">+</span>
+                <span class="stat__label">Projects Built</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number" data-target="3">0</span>
+                <span class="stat__label">Cloud Platforms</span>
+              </div>
+            </div>
+          </div>
+          <div class="about__skills reveal reveal--right">
+            <h3>Languages</h3>
+            <div class="skills__grid">
+              <div class="skill-tag">Java</div>
+              <div class="skill-tag">Python</div>
+              <div class="skill-tag">TypeScript</div>
+              <div class="skill-tag">JavaScript</div>
+              <div class="skill-tag">C</div>
+              <div class="skill-tag">SQL</div>
+              <div class="skill-tag">HTML</div>
+              <div class="skill-tag">CSS</div>
+            </div>
+            <h3>Developer Tools</h3>
+            <div class="skills__grid">
+              <div class="skill-tag">Git</div>
+              <div class="skill-tag">GitHub</div>
+              <div class="skill-tag">Google Cloud</div>
+              <div class="skill-tag">AWS</div>
+              <div class="skill-tag">Azure</div>
+              <div class="skill-tag">Docker</div>
+              <div class="skill-tag">CI/CD</div>
+              <div class="skill-tag">Scrum</div>
+              <div class="skill-tag">Agile</div>
+            </div>
+            <h3>Libraries & Frameworks</h3>
+            <div class="skills__grid">
+              <div class="skill-tag">JUnit</div>
+              <div class="skill-tag">SQLite</div>
+              <div class="skill-tag">jQuery</div>
+              <div class="skill-tag">Pandas</div>
+              <div class="skill-tag">NumPy</div>
+              <div class="skill-tag">Matplotlib</div>
+              <div class="skill-tag">PyTest</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <h2 class="section__title reveal">Featured <span class="accent">Projects</span></h2>
+        <p class="section__subtitle reveal">A selection of my recent work</p>
+        <div class="projects__grid">
+          <article class="project-card reveal">
+            <div class="project-card__image">
+              <img src="showcase.jpg" alt="Multi-Family Housing & Employment Insights" loading="lazy" width="600" height="400">
+              <div class="project-card__overlay">
+                <a href="https://github.com/ElijahLewis3" class="btn btn--small btn--outline" target="_blank" rel="noopener">Source Code</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <h3>Multi-Family Housing & Employment Insights</h3>
+              <p>Data visualization platform analyzing the relationship between employment trends and apartment construction patterns in Hamilton and Toronto. Features interactive bar, pie, and stacked charts for regional housing starts/completions and industry-level employment distributions.</p>
+              <div class="project-card__tech">
+                <span>Java</span><span>TypeScript</span><span>TSX</span><span>Python</span><span>Docker</span><span>AWS</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-card__image">
+              <img src="showcase.jpg" alt="8 Ball Pool" loading="lazy" width="600" height="400">
+              <div class="project-card__overlay">
+                <a href="https://github.com/ElijahLewis3" class="btn btn--small btn--outline" target="_blank" rel="noopener">Source Code</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <h3>8 Ball Pool</h3>
+              <p>Full-stack billiards game with a C and Python backend using SWIG for seamless cross-language integration. Features a robust SQLite database managing player data and game statistics for 50+ concurrent sessions, with a responsive frontend.</p>
+              <div class="project-card__tech">
+                <span>C</span><span>Python</span><span>SQLite</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-card__image">
+              <img src="showcase.jpg" alt="Mancala" loading="lazy" width="600" height="400">
+              <div class="project-card__overlay">
+                <a href="https://github.com/ElijahLewis3" class="btn btn--small btn--outline" target="_blank" rel="noopener">Source Code</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <h3>Mancala</h3>
+              <p>Classic board game built with a flexible, extensible architecture leveraging OOP principles including encapsulation and polymorphism. Features an intuitive Java Swing GUI with efficient event handling and comprehensive JUnit test coverage.</p>
+              <div class="project-card__tech">
+                <span>Java</span><span>Java Swing</span><span>JUnit</span><span>OOP</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <h2 class="section__title reveal">Work <span class="accent">Experience</span></h2>
+        <p class="section__subtitle reveal">My professional journey</p>
+        <div class="experience__grid">
+          <article class="exp-card reveal">
+            <div class="exp-card__header">
+              <div class="exp-card__logo">
+                <div class="logo-placeholder">S</div>
+              </div>
+              <div class="exp-card__meta">
+                <h3>Open-Source Contributor</h3>
+                <p class="exp-card__company">Signal — University of Guelph</p>
+                <span class="exp-card__duration">Jan. 2026 — Apr. 2026</span>
+              </div>
+            </div>
+            <ul class="exp-card__responsibilities">
+              <li>Collaborated in a team of 8 contributors using Scrum, participating in sprint planning, daily stand-ups, and retrospectives across two-week sprints to deliver features into Signal's end-to-end encrypted messaging application</li>
+              <li>Implemented a voice message transcription feature from requirements gathering to deployment, enabling users to read voice message content as text directly within the chat interface</li>
+              <li>Added a countdown timer and a grid overlay to the in-app camera interface, enhancing usability and photo capture precision</li>
+            </ul>
+            <div class="exp-card__tech">
+              <span>Scrum</span><span>Agile</span><span>Git</span><span>Open Source</span><span>CI/CD</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="awards section" id="education">
+      <div class="container">
+        <h2 class="section__title reveal"><span class="accent">Education</span> & Coursework</h2>
+        <p class="section__subtitle reveal">Academic foundation and areas of study</p>
+        <div class="awards__grid">
+          <article class="award-card award-card--wide reveal">
+            <div class="award-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/></svg>
+            </div>
+            <h3>Bachelor of Computing — Software Engineering</h3>
+            <p class="award-card__org">University of Guelph &middot; Guelph, ON &middot; Sep 2022 — Apr 2026</p>
+            <p>Four-year degree focused on software design, systems architecture, and modern development practices.</p>
+          </article>
+          <article class="award-card reveal">
+            <div class="award-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Data Structures & Algorithms</h3>
+            <p class="award-card__org">Core Coursework</p>
+            <p>Fundamental algorithms, complexity analysis, trees, graphs, sorting, and search techniques.</p>
+          </article>
+          <article class="award-card reveal">
+            <div class="award-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Object Oriented Programming</h3>
+            <p class="award-card__org">Core Coursework</p>
+            <p>Encapsulation, inheritance, polymorphism, design patterns, and SOLID principles.</p>
+          </article>
+          <article class="award-card reveal">
+            <div class="award-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <h3>Cloud Computing</h3>
+            <p class="award-card__org">Core Coursework</p>
+            <p>AWS, Azure, and Google Cloud services, containerization, deployment, and scalable infrastructure.</p>
+          </article>
+          <article class="award-card reveal">
+            <div class="award-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>Web Design & Development</h3>
+            <p class="award-card__org">Core Coursework</p>
+            <p>Responsive design, frontend frameworks, backend integration, and modern web standards.</p>
+          </article>
+          <article class="award-card reveal">
+            <div class="award-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3>System Analysis & Design</h3>
+            <p class="award-card__org">Core Coursework</p>
+            <p>UML modeling, requirements engineering, system architecture, and software project management.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <h2 class="section__title reveal">Get in <span class="accent">Touch</span></h2>
+        <p class="section__subtitle reveal">Have a project in mind? Let's talk.</p>
+        <div class="contact__grid">
+          <div class="contact__info reveal">
+            <div class="contact__info-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:elijah.tlewis3@gmail.com">elijah.tlewis3@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact__info-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div>
+                <h4>Phone</h4>
+                <a href="tel:+16475445789">(647) 544-5789</a>
+              </div>
+            </div>
+            <div class="contact__info-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <h4>Location</h4>
+                <p>Toronto, ON</p>
+              </div>
+            </div>
+            <div class="contact__info-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <div>
+                <h4>Availability</h4>
+                <p>Open for new grad roles</p>
+              </div>
+            </div>
+            <div class="social-links social-links--contact">
+              <a href="https://linkedin.com/in/elijah-lewis03" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="https://github.com/ElijahLewis3" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <form class="contact__form reveal reveal--right" id="contactForm" novalidate>
+            <div class="form-group">
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder=" ">
+              <label for="name">Your Name</label>
+              <span class="form-error">Please enter your name</span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder=" ">
+              <label for="email">Your Email</label>
+              <span class="form-error">Please enter a valid email</span>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" required placeholder=" ">
+              <label for="subject">Subject</label>
+              <span class="form-error">Please enter a subject</span>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+              <label for="message">Your Message</label>
+              <span class="form-error">Please enter your message</span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              <span class="btn__text">Send Message</span>
+              <span class="btn__loading">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg>
+              </span>
+              <span class="btn__success">Message Sent!</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <a href="#" class="footer__logo">EL<span class="accent">.</span></a>
+        <p>&copy; 2026 Elijah Lewis. All rights reserved.</p>
+        <div class="social-links social-links--footer">
+          <a href="https://linkedin.com/in/elijah-lewis03" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://github.com/ElijahLewis3" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
