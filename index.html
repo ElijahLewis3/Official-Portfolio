@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Elijah Lewis — Portfolio">
+  <meta name="description" content="Elijah Lewis — Software Engineering Student & Open-Source Contributor">
   <title>Elijah Lewis — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,41 +25,56 @@
 
   <main>
     <section class="hero" id="hero">
+      <canvas class="hero__particles" id="particlesCanvas"></canvas>
+      <div class="hero__gradient"></div>
       <div class="hero__content container">
         <div class="hero__text">
           <p class="hero__greeting">Hello, I'm</p>
           <h1 class="hero__name">Elijah Lewis</h1>
-          <p class="hero__tagline">Software Engineering Student</p>
+          <h2 class="hero__title">Software Engineer</h2>
+          <p class="hero__tagline">Software Engineering student at the University of Guelph with hands-on experience in full-stack development, open-source contribution, and data-driven applications.</p>
+          <div class="hero__cta">
+            <a href="#projects" class="btn btn--primary">View My Work</a>
+            <a href="#contact" class="btn btn--outline">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero__image">
+          <div class="hero__image-wrapper">
+            <img src="portrait.jpg" alt="Elijah Lewis portrait" loading="eager" width="450" height="450">
+            <div class="hero__image-border"></div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="about">
       <div class="container">
-        <h2 class="section__title">About Me</h2>
-        <p>Coming soon.</p>
+        <h2 class="section__title">About <span class="accent">Me</span></h2>
+        <p class="section__subtitle">Get to know the person behind the code</p>
       </div>
     </section>
 
     <section class="section" id="projects">
       <div class="container">
-        <h2 class="section__title">Projects</h2>
-        <p>Coming soon.</p>
+        <h2 class="section__title">Featured <span class="accent">Projects</span></h2>
+        <p class="section__subtitle">A selection of my recent work</p>
       </div>
     </section>
 
     <section class="section" id="contact">
       <div class="container">
-        <h2 class="section__title">Contact</h2>
-        <p>Coming soon.</p>
+        <h2 class="section__title">Get in <span class="accent">Touch</span></h2>
+        <p class="section__subtitle">Have a project in mind? Let's talk.</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Elijah Lewis</p>
+      <p>&copy; 2026 Elijah Lewis. All rights reserved.</p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
