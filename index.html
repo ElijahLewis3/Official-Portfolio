@@ -174,10 +174,40 @@
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <section class="contact section" id="contact">
       <div class="container">
         <h2 class="section__title">Get in <span class="accent">Touch</span></h2>
         <p class="section__subtitle">Have a project in mind? Let's talk.</p>
+        <div class="contact__grid">
+          <div class="contact__info">
+            <div class="contact__info-item"><h4>Email</h4><a href="mailto:elijah.tlewis3@gmail.com">elijah.tlewis3@gmail.com</a></div>
+            <div class="contact__info-item"><h4>Phone</h4><a href="tel:+16475445789">(647) 544-5789</a></div>
+            <div class="contact__info-item"><h4>Location</h4><p>Guelph, ON</p></div>
+          </div>
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="form-group">
+              <input type="text" id="name" name="name" required placeholder=" ">
+              <label for="name">Your Name</label>
+              <span class="form-error">Please enter your name</span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required placeholder=" ">
+              <label for="email">Your Email</label>
+              <span class="form-error">Please enter a valid email</span>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" required placeholder=" ">
+              <label for="subject">Subject</label>
+              <span class="form-error">Please enter a subject</span>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+              <label for="message">Your Message</label>
+              <span class="form-error">Please enter your message</span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>

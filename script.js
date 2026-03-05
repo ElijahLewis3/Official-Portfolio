@@ -53,3 +53,33 @@
     animate();
   }
 })();
+
+// Contact form validation
+(() => {
+  const form = document.querySelector('#contactForm');
+  if (!form) return;
+  const validators = {
+    name: v => v.trim().length >= 2,
+    email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
+    subject: v => v.trim().length >= 2,
+    message: v => v.trim().length >= 10,
+  };
+  const validate = field => {
+    const group = field.closest('.form-group');
+    const valid = validators[field.name]?.(field.value) ?? true;
+    group.classList.toggle('error', !valid);
+    group.classList.toggle('valid', valid && field.value.length > 0);
+    return valid;
+  };
+  form.querySelectorAll('input, textarea').forEach(f => {
+    f.addEventListener('blur', () => validate(f));
+  });
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const fields = [...form.querySelectorAll('input, textarea')];
+    if (fields.map(f => validate(f)).every(Boolean)) {
+      form.reset();
+      fields.forEach(f => f.closest('.form-group').classList.remove('valid', 'error'));
+    }
+  });
+})();
