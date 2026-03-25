@@ -290,11 +290,15 @@
   /* ============================================
      Contact Form
      ============================================ */
+  const sanitize = str => str.replace(/[<>"'&]/g, c => ({
+    '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#x27;', '&': '&amp;'
+  })[c]);
+
   const validators = {
-    name: v => v.trim().length >= 2,
-    email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
-    subject: v => v.trim().length >= 2,
-    message: v => v.trim().length >= 10,
+    name: v => v.trim().length >= 2 && v.trim().length <= 100,
+    email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) && v.length <= 254,
+    subject: v => v.trim().length >= 2 && v.trim().length <= 200,
+    message: v => v.trim().length >= 10 && v.trim().length <= 2000,
   };
 
   const validateField = field => {
@@ -304,6 +308,9 @@
     group.classList.toggle('valid', valid && field.value.length > 0);
     return valid;
   };
+
+  let lastSubmitTime = 0;
+  const SUBMIT_COOLDOWN_MS = 10000;
 
   if (contactForm) {
     $$('input, textarea', contactForm).forEach(field => {
@@ -317,10 +324,19 @@
 
     contactForm.addEventListener('submit', e => {
       e.preventDefault();
+
+      const now = Date.now();
+      if (now - lastSubmitTime < SUBMIT_COOLDOWN_MS) return;
+
       const fields = $$('input, textarea', contactForm);
       const allValid = fields.map(f => validateField(f)).every(Boolean);
 
       if (!allValid) return;
+
+      lastSubmitTime = now;
+
+      const formData = {};
+      fields.forEach(f => { formData[f.name] = sanitize(f.value.trim()); });
 
       const submitBtn = $('button[type="submit"]', contactForm);
       submitBtn.classList.add('loading');
