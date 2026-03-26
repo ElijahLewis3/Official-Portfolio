@@ -69,12 +69,12 @@
           <div class="hero__cta">
             <a href="#projects" class="btn btn--primary">View My Work</a>
             <a href="#contact" class="btn btn--outline">Get in Touch</a>
-            <a href="resume.pdf" class="btn btn--outline" download>Download Resume</a>
+            <a href="assets/resume.pdf" class="btn btn--outline" download>Download Resume</a>
           </div>
         </div>
         <div class="hero__image reveal reveal--right">
           <div class="hero__image-wrapper">
-            <img src="headshot.jpg" alt="Elijah Lewis portrait" loading="eager" width="450" height="450">
+            <img src="assets/headshot.jpg" alt="Elijah Lewis portrait" loading="eager" width="450" height="450">
             <div class="hero__image-border"></div>
           </div>
         </div>
@@ -88,18 +88,18 @@
 
     <!-- About Section -->
     <section class="about section" id="about">
-      <div class="about__bg" style="background-image: url('workspace.jpg')"></div>
+      <div class="about__bg" style="background-image: url('assets/workspace.jpg')"></div>
       <div class="container">
         <h2 class="section__title reveal">About <span class="accent">Me</span></h2>
         <p class="section__subtitle reveal">Get to know the person behind the code</p>
         <div class="about__grid">
           <div class="about__content reveal">
-            <p>I'm a Software Engineering student at the University of Guelph pursuing a Bachelor of Computing, graduating in April 2026. I'm passionate about building robust, scalable applications and solving complex problems through clean code and thoughtful design.</p>
-            <p>My experience spans full-stack development, data visualization platforms, and open-source contributions — including feature development on Signal, the end-to-end encrypted messaging application. I thrive in Agile environments and enjoy collaborating with teams to ship meaningful software.</p>
-            <p>I bring hands-on expertise across multiple languages, cloud platforms, and development tools, with a strong foundation in data structures, algorithms, system design, and object-oriented programming.</p>
+            <p>I'm finishing up my Software Engineering degree at the University of Guelph and I genuinely enjoy the process of building things and figuring out how pieces fit together, debugging the weird edge cases, and seeing something go from an idea to working software.</p>
+            <p>So far, I've built full-stack apps, worked on data visualization platforms, and contributed features to a fork of Signal as part of an Agile team. I like getting into large codebases, understanding how they work, and making meaningful additions to them.</p>
+            <p>Outside of coding, I stay active, I'm usually at the gym or playing basketball with friends. It keeps me balanced and honestly helps me think more clearly when I'm back at my desk.</p>
             <div class="about__stats">
               <div class="stat">
-                <span class="stat__number" data-target="8">0</span>
+                <span class="stat__number" data-target="9">0</span>
                 <span class="stat__label">Languages</span>
               </div>
               <div class="stat">
@@ -123,6 +123,7 @@
               <div class="skill-tag">SQL</div>
               <div class="skill-tag">HTML</div>
               <div class="skill-tag">CSS</div>
+              <div class="skill-tag">Kotlin</div>
             </div>
             <h3>Developer Tools</h3>
             <div class="skills__grid">
@@ -159,9 +160,9 @@
         <div class="projects__grid">
           <article class="project-card reveal">
             <div class="project-card__image">
-              <img src="mfhe.jpg" alt="Multi-Family Housing & Employment Insights" loading="lazy" width="600" height="400">
+              <img src="assets/mfhe.jpg" alt="Multi-Family Housing & Employment Insights" loading="lazy" width="600" height="400">
               <div class="project-card__overlay">
-                <a href="https://github.com/ElijahLewis3/MFHE" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer">Source Code</a>
+                <a href="https://github.com/ElijahLewis3/TorontoHamiltonCMAInsights" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer">Source Code</a>
               </div>
             </div>
             <div class="project-card__content">
@@ -174,7 +175,7 @@
           </article>
           <article class="project-card reveal">
             <div class="project-card__image">
-              <img src="billiards.jpg" alt="8 Ball Pool" loading="lazy" width="600" height="400">
+              <img src="assets/billiards.jpg" alt="8 Ball Pool" loading="lazy" width="600" height="400">
               <div class="project-card__overlay">
                 <a href="https://github.com/ElijahLewis3/8-Ball-Pool" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer">Source Code</a>
               </div>
@@ -189,7 +190,7 @@
           </article>
           <article class="project-card reveal">
             <div class="project-card__image">
-              <img src="showcase.jpg" alt="Mancala" loading="lazy" width="600" height="400">
+              <img src="assets/mancala.jpg" alt="Mancala" loading="lazy" width="600" height="400">
               <div class="project-card__overlay">
                 <a href="https://github.com/ElijahLewis3/Mancala" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer">Source Code</a>
               </div>
@@ -229,7 +230,7 @@
               <li>Added a countdown timer and a grid overlay to the in-app camera interface, enhancing usability and photo capture precision</li>
             </ul>
             <div class="exp-card__tech">
-              <span>Scrum</span><span>Agile</span><span>Git</span><span>Open Source</span><span>CI/CD</span>
+              <span>Kotlin</span><span>Java</span><span>Scrum</span><span>Agile</span><span>Git</span><span>Open Source</span><span>CI/CD</span>
             </div>
           </article>
         </div>
@@ -298,7 +299,6 @@
     <section class="contact section" id="contact">
       <div class="container">
         <h2 class="section__title reveal">Get in <span class="accent">Touch</span></h2>
-        <p class="section__subtitle reveal">Have a project in mind? Let's talk.</p>
         <div class="contact__grid">
           <div class="contact__info reveal">
             <div class="contact__info-item">
@@ -338,35 +338,6 @@
               </a>
             </div>
           </div>
-          <form class="contact__form reveal reveal--right" id="contactForm" novalidate>
-            <div class="form-group">
-              <input type="text" id="name" name="name" required autocomplete="name" placeholder=" " maxlength="100">
-              <label for="name">Your Name</label>
-              <span class="form-error">Please enter your name</span>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" name="email" required autocomplete="email" placeholder=" " maxlength="254">
-              <label for="email">Your Email</label>
-              <span class="form-error">Please enter a valid email</span>
-            </div>
-            <div class="form-group">
-              <input type="text" id="subject" name="subject" required placeholder=" " maxlength="200">
-              <label for="subject">Subject</label>
-              <span class="form-error">Please enter a subject</span>
-            </div>
-            <div class="form-group">
-              <textarea id="message" name="message" rows="5" required placeholder=" " maxlength="2000"></textarea>
-              <label for="message">Your Message</label>
-              <span class="form-error">Please enter your message</span>
-            </div>
-            <button type="submit" class="btn btn--primary btn--full">
-              <span class="btn__text">Send Message</span>
-              <span class="btn__loading">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg>
-              </span>
-              <span class="btn__success">Message Sent!</span>
-            </button>
-          </form>
         </div>
       </div>
     </section>
