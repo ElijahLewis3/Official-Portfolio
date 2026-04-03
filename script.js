@@ -140,7 +140,7 @@
   const titles = [
     'Software Engineer',
     'Full Stack Developer',
-    'Open Source Contributor',
+    'Systems-Focused Developer',
     'B.Comp Software Engineering'
   ];
 
