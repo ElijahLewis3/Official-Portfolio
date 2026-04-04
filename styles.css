@@ -510,7 +510,8 @@ input, textarea {
 .hero__image-wrapper {
   position: relative;
   width: 380px;
-  height: 380px;
+  height: 500px;
+  /* height: 380px; */
 }
 
 .hero__image-wrapper img {
